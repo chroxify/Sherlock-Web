@@ -1,0 +1,19 @@
+/* Made with ♥️️ by ️Chroxify */
+.header .text {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    min-width: 200px;
+    font-size: calc(0.75em + 1vmin);
+    color: #000000;
+}
+
+/* Gh logo */
+.header .gt-logo {
+    pointer-events: none;
+    position: absolute;
+    width: calc(2.75em + 3vmin);
+    height: calc(2.75em + 3vmin);
+    right: 9px;
+    top: 5px;
+}
