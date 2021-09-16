@@ -1,6 +1,7 @@
 // Components
 import Header from './Components/Header/Header.js'
 import SearchBar from './Components/SearchBar/SearchBar.js';
+import MainMenu from './Components/MainMenu/MainMenu.js';
 
 // CSS
 import './App.css';
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <SearchBar />
+      <MainMenu />
     </div>
   );
 }

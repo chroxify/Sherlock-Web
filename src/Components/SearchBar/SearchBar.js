@@ -8,7 +8,8 @@ import './SearchBar.css';
 const SearchBar = () => {
     return (
         <div className="search-box">
-            <input type="text" className="input" />
+            @
+            <input type="text" className="input" placeholder="username" />
             <Icon icon="akar-icons:search" className="icon" />
         </div>
     );
