@@ -10,7 +10,7 @@
 
 /* Gh logo */
 .header .gt-logo {
-    pointer-events: none;
+    cursor: pointer;
     position: absolute;
     width: calc(2.75em + 3vmin);
     height: calc(2.75em + 3vmin);

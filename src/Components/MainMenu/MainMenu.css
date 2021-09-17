@@ -2,7 +2,7 @@
     /* Body */
     position: absolute;
     width: 650px;
-    height: 620px;
+    height: 65%;
     top: 61vh;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -34,12 +34,48 @@ section {
     padding-right: 10px;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    transition: .3s;
     background-color: #ECEBFE;
+    color: black;
     border-radius: 5px;
     min-height: 33px;
+}
+
+.item:hover {
+    background-color: #9e9bc9;
 }
 
 .item .icon-yes {
     font-size: 30px;
     color: #5E87EB;
+}
+
+@media only screen and (max-width: 1000px) {
+    .card {
+        width: 500px;
+        top: 60vh;
+        height: 75%;
+    }
+
+    h1 {
+        font-size: 33px;
+    }
+  }
+  
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 350px;
+        height: 79%;
+        top: 58vh;
+    }
+
+    h1 {
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+
+    section {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
 }
