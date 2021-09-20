@@ -8,13 +8,13 @@ import MainMenu from './Components/MainMenu/MainMenu.js';
 import './App.css';
 
 function App() {
-  const [data, setData] = useState(false);
+  const [isPending, setisPending] = useState(false);
 
   return (
     <div className="App">
       <Header />
-      <SearchBar setData={setData} data={data} />
-      <MainMenu setData={setData} data={data} />
+      <SearchBar setisPending={setisPending} isPending={isPending} />
+      <MainMenu setisPending={setisPending} isPending={isPending} />
     </div>
   );
 }
