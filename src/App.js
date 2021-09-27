@@ -9,12 +9,13 @@ import './App.css';
 
 function App() {
   const [isPending, setisPending] = useState(false);
+  const [data, setData] = useState([]);
 
   return (
     <div className="App">
       <Header />
-      <SearchBar setisPending={setisPending} isPending={isPending} />
-      <MainMenu setisPending={setisPending} isPending={isPending} />
+      <SearchBar setisPending={setisPending} isPending={isPending} setData={setData} />
+      <MainMenu isPending={isPending} data={data} />
     </div>
   );
 }

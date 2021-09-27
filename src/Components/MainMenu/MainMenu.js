@@ -18,13 +18,13 @@ const override = css`
     transform: translate(-50%, -50%) }
     `;
 
-const MainMenu = ({ isPending, setisPending }) => {
+const MainMenu = (props) => {
     return (
         <div className="card">
-            {!isPending
+            {!props.isPending
                 ?
                 (<>
-                    <h1>Results for {isPending}:</h1>
+                    <h1>Results for {props.isPending}:</h1>
                     <section className="basic-grid">
                         <a href="/#" target="_blank" className="item"> <Icon icon="dashicons:yes" className="icon-yes" /> 1</a>
                         <a href="/#" target="_blank" className="item">2</a>
