@@ -8,7 +8,7 @@ import MainMenu from './Components/MainMenu/MainMenu.js';
 import './App.css';
 
 function App() {
-  const [isPending, setisPending] = useState(false);
+  const [isPending, setisPending] = useState(undefined);
   const [data, setData] = useState([]);
 
   return (

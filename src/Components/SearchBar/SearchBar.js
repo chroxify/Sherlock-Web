@@ -12,7 +12,6 @@ const SearchBar = (props) => {
         if (e.key === 'Enter' && e.target.value) {
             props.setisPending(true);
             data.push(e.target.value);
-            console.log(data);
 
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -35,12 +34,9 @@ const SearchBar = (props) => {
                     data.push(obj);
                     props.setData(data);
                     props.setisPending(false);
-
                 })
                 .catch(error => {
-                    console.log('error', error);
-                    data.push(error);
-                    props.setData(data);
+                    props.setData(error.message);
                     props.setisPending(false);
                 });
         }

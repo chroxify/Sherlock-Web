@@ -18,12 +18,18 @@ const override = css`
     `;
 
 const MainMenu = (props) => {
-    const webs = props.data[1] ? JSON.parse(props.data[1]) : null;
+    const webs = props.data[1] && typeof props.data === 'object' ? JSON.parse(props.data[1]) : null;
 
     return (
         <div className="card">
-            {!props.isPending
+            {
+                props.isPending === undefined
                 ?
+                <h2>Type in a username to start</h2>
+                :
+                !props.isPending
+                ?
+                typeof props.data === 'string' ? <h1>{props.data}</h1> : 
                 (<>
                     {props.data[0] && <h1>Results for {props.data[0]}:</h1>}
                     <section className="basic-grid">
@@ -36,9 +42,7 @@ const MainMenu = (props) => {
                     </section>
                 </>)
                 :
-                (
-                    <HashLoader color="#9e9bc9" css={override} size={130} />
-                )
+                <HashLoader color="#9e9bc9" css={override} size={130} />
             }
         </div >
     );
