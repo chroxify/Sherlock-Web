@@ -25,11 +25,10 @@ const MainMenu = (props) => {
             {!props.isPending
                 ?
                 (<>
-                    <h1>Results for {props.data[0]}:</h1>
+                    {props.data[0] && <h1>Results for {props.data[0]}:</h1>}
                     <section className="basic-grid">
                         {webs && webs.map((e) => (
-
-                            <div>
+                            <div key={e.id}>
                                 <a href={e.url} target="_blank" rel="noreferrer" className="item">{e.name}</a>
                             </div>
                         ))

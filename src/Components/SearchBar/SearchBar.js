@@ -39,6 +39,8 @@ const SearchBar = (props) => {
                 })
                 .catch(error => {
                     console.log('error', error);
+                    data.push(error);
+                    props.setData(data);
                     props.setisPending(false);
                 });
         }
